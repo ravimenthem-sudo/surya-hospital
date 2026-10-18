@@ -1,0 +1,125 @@
+/* ============================================================
+   FOOTER & FLOATING ACTIONS RESPONSIVE STYLES
+   ============================================================ */
+
+.ref-footer {
+  background-color: #28171D;
+  color: #FFFFFF;
+  border-top: 1px solid #3A222A;
+  margin-top: auto;
+}
+
+/* 4 columns desktop layout */
+.footer-directory-grid {
+  display: grid;
+  grid-template-columns: 3.5fr 4fr 2fr 2.5fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+/* Tablet (collapse 4 columns into 2 columns at 1100px) */
+@media (max-width: 1100px) {
+  .footer-directory-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem;
+  }
+}
+
+/* Mobile (collapse into single centered column with 100% width buttons on 768px) */
+@media (max-width: 768px) {
+  .footer-directory-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 2.25rem;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col h4 {
+    text-align: center !important;
+  }
+
+  .footer-items-grid {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-contact-row {
+    justify-content: center !important;
+  }
+
+  .footer-col a,
+  .footer-col button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   FLOATING SIDE ACTIONS (WHATSAPP, PHONE, APPOINTMENT)
+   ============================================================ */
+
+.floating-side-actions {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.25rem;
+  z-index: 750;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-action-btn {
+  width: 48px;
+  height: 48px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  position: relative;
+}
+
+.floating-action-btn:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 14px 30px rgba(198, 83, 50, 0.35);
+}
+
+.floating-action-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* On max-width: 991px (when MobileBottomBar is visible), lift floating buttons above the bar */
+@media (max-width: 991px) {
+  .floating-side-actions {
+    bottom: 5.25rem !important; /* Above the 64px mobile bottom bar */
+    right: 1rem !important;
+  }
+}
+
+/* On max-width: 768px, scale down to 46px diameter and ensure no overlap */
+@media (max-width: 768px) {
+  .floating-side-actions {
+    bottom: 5rem !important;
+    right: 0.85rem !important;
+    gap: 0.6rem !important;
+  }
+
+  .floating-action-btn {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+  }
+}

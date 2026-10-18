@@ -1,0 +1,8 @@
+# Robots.txt for Surya Hospital
+# Official Domain: https://suryahospital.co (subject to hospital deployment domain confirmation)
+
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://suryahospital.co/sitemap.xml

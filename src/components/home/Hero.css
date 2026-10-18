@@ -1,0 +1,204 @@
+/* ============================================================
+   STANFORD MEDICINE STYLE HERO SECTION
+   Centered Editorial Headline & Grand Architectural Building Visual
+   ============================================================ */
+
+.stanford-hero-section {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  border-bottom: 1px solid #EAE0D6;
+}
+
+/* 1. Header Typography Area (Direct Reference: Centered Editorial Headline above Building) */
+.stanford-hero-header-area {
+  padding-top: 3.25rem;
+  padding-bottom: 2.75rem;
+  background-color: #FFFFFF;
+}
+
+.stanford-hero-headline {
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0;
+  max-width: 960px;
+  text-align: center;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.stanford-hero-image-stage {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #000000;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stanford-building-fullbleed {
+  position: relative;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000000;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stanford-building-img {
+  width: 100%;
+  max-height: none !important;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+}
+
+/* Cinematic Scrim: gentle contrast scrim preserving video brilliance while keeping text crisp */
+.hero-cinematic-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(37, 43, 51, 0.25) 0%,
+    rgba(37, 43, 51, 0.15) 30%,
+    rgba(37, 43, 51, 0.45) 70%,
+    rgba(37, 43, 51, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-overlay-content {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .hero-overlay-content {
+    bottom: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-overlay-content {
+    bottom: 2.75rem;
+  }
+}
+
+/* 3. Sleek Integrated Trust Strip */
+.stanford-trust-bar-wrapper {
+  background-color: #FCFAF7;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .stanford-trust-bar-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+.stanford-trust-box {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border: 1px solid #DED7D7;
+  border-radius: 14px;
+  padding: 1.25rem 1.75rem;
+  box-shadow: 0 4px 20px rgba(40, 23, 29, 0.04);
+}
+
+.stanford-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  divide-x: 1px solid #DED7D7;
+}
+
+.stanford-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.35rem 1.25rem;
+}
+
+.stanford-trust-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #E8D8D9;
+  border: 1px solid #DED7D7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .stanford-hero-header-area {
+    padding-top: 2.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .stanford-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    divide-x: none;
+    gap: 1.25rem;
+  }
+
+  .stanford-trust-item {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* On compact screens, ensure building video has comfortable min-height to house wrapped headlines & dual CTAs */
+  .stanford-building-img {
+    min-height: 480px;
+  }
+
+  .stanford-hero-header-area {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .stanford-hero-headline {
+    font-size: 2.2rem;
+  }
+
+  .stanford-trust-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .stanford-trust-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #F4E7DD;
+  }
+
+  .stanford-trust-item:last-child {
+    border-bottom: none;
+  }
+
+  .stanford-trust-bar-wrapper {
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+}
